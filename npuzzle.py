@@ -130,14 +130,15 @@ def main():
     size_puzzle = int(input("Nhập cỡ ô chữ: "))
     start_matrix = create_random_matrix(size_puzzle)
     target_matrix = target_state(size_puzzle)
-
-    # print("Trạng thái ban đầu:")
-    # print(start_matrix)
-    # print("Trạng thái mục tiêu:")
-    # print(target_matrix)
-
     path = a_star(start_matrix, target_matrix)
-    # print_solution(path)
+
+# Uncomment để in ra các bước
+#     print("Trạng thái ban đầu:")
+#     print(start_matrix)
+#     print("Trạng thái mục tiêu:")
+#     print(target_matrix)
+#     print_solution(path)
+
     print(solution_step(path))
 
 # Chạy chương trình
